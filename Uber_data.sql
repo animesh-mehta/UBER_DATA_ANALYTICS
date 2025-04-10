@@ -32,6 +32,8 @@ SELECT * FROM bookings WHERE Payment_Method = 'UPI';
 --8. Find the average customer rating per vehicle type:
 SELECT Vehicle_Type, AVG(Customer_Rating) as avg_customer_rating FROM bookings
 GROUP BY Vehicle_Type;
+
+
 --9. Calculate the total booking value of rides completed successfully:
 SELECT SUM(Booking_Value) as total_successful_value FROM bookings WHERE
 Booking_Status = 'Success';
